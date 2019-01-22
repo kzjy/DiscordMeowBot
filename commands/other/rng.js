@@ -5,7 +5,7 @@ class rngComand extends commando.Command {
     constructor(client) {
         super(client, {
             name: "rng",
-            group: "game",
+            group: "other",
             memberName: "rng",
             description: "gives a number between 0 - 100 inclusive"
         })

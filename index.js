@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const TOKEN = require("./token");
 
 bot.registry.registerGroup('music', 'Music');
-bot.registry.registerGroup('game', 'Game');
+bot.registry.registerGroup('other', 'Other');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 
