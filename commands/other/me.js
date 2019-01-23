@@ -8,18 +8,12 @@ class meComand extends commando.Command {
             name: "me",
             group: "other",
             memberName: "me",
-            description: "Description about me, the bot "
+            description: "gives a number between 0 - 100 inclusive"
         })
     }
 
     async run(message, args) {
-        let pic = bot.user.displayerAvatarURL;
-        var info = new discord.RichEmbed()
-            .setField("The story of me, the bot", "I'm a discord bot created by the great Kelvin-Sama", true)
-            .setColor(0xD2A3E9)
-            .setThumbnail(pic)
-            .setTitle("About Meow-Bot")
-            .setURL("https://remax-aphotos-wc.imgix.net/AccountData/150114180/austinkayPhoto.JPG")
+        // Empty command, content in index.js so bot can be referenced
     }
 }
 
