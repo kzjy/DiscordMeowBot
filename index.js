@@ -1,8 +1,7 @@
-const Commando= require('discord.js-commando');
+
 const discord = require('discord.js');
-const bot = new Commando.Client({
-    commandPrefix: '~'
-});
+const commando = require('discord.js-commando');
+const bot = new commando.Client();
 const TOKEN = require("./token");
 
 bot.registry.registerGroup('music', 'Music');
@@ -10,7 +9,12 @@ bot.registry.registerGroup('other', 'Other');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 
+bot.music = require('discord.js-musicbot-addon')
+bot.music.start(bot, {youtubeKey: TOKEN.YTAPI});
 
+/**
+ * Respond to messages 
+ */
 bot.on('message', function(message) {
     if (message.content.toLowerCase() == 'hello') {
         message.channel.send('Hello ' + message.author);
@@ -30,7 +34,7 @@ bot.on('message', message => {
             .setColor(0xD2A3E9)
             .setThumbnail(pic)
             .setTitle("About Meow-Bot")
-            .setURL("https://remax-aphotos-wc.imgix.net/AccountData/150114180/austinkayPhoto.JPG")
+            .setURL("https://www.reddit.com/r/me_irl/")
         message.channel.send(info);
     }
 })

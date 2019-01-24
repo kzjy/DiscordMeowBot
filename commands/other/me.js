@@ -8,7 +8,7 @@ class meComand extends commando.Command {
             name: "me",
             group: "other",
             memberName: "me",
-            description: "gives a number between 0 - 100 inclusive"
+            description: "Gives basic info about bot"
         })
     }
 

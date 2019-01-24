@@ -7,7 +7,7 @@ class joinChannelComand extends commando.Command {
             name: "join",
             group: "music",
             memberName: "join",
-            description: "join the voice channel"
+            description: "Join the voice channel"
         })
     }
 

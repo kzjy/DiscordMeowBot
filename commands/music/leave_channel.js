@@ -7,16 +7,13 @@ class leaveChannelComand extends commando.Command {
             name: "leave",
             group: "music",
             memberName: "leave",
-            description: "leave the voice channel"
+            description: "Leave the voice channel"
         })
     }
 
     async run(message, args) {
-        if (message.guild.voiceConnection) {
-            message.guild.voiceConnection.disconnect();
-        } else {
-            message.channel.send('I aint in no voice channel bud');
-        }
+        // specifics implemented with discord.js-musicbot-addon
+        // empty command here to make use of discord.js-commando ui
     }
 }
 
