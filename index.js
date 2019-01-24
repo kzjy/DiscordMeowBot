@@ -1,7 +1,11 @@
 
+const pref = '~';
 const discord = require('discord.js');
 const commando = require('discord.js-commando');
-const bot = new commando.Client();
+const bot = new commando.Client({
+    commandPrefix: pref
+});
+const music = require('discord.js-musicbot-addon');
 const TOKEN = require("./token");
 
 bot.registry.registerGroup('music', 'Music');
@@ -10,7 +14,9 @@ bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 
 bot.music = require('discord.js-musicbot-addon')
-bot.music.start(bot, {youtubeKey: TOKEN.YTAPI});
+music.start(bot, {
+    youtubeKey: TOKEN.YTAPI
+});
 
 /**
  * Respond to messages 
